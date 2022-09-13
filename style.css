@@ -1,0 +1,19 @@
+#listCervejas{
+    display: none;
+}
+
+#listCervejas.animar h1{
+    animation-name: animação;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes animação {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

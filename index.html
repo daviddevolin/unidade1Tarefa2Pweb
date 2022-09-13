@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css"> 
     <title>Cervejas</title>
 </head>
 <body>
     <div id="loadCervejas">
         <button id="botaoCarregar">ver cervejas</button>
+        <h1 style="opacity: 20%;">teste</h1>
     </div> 
-    <div id="listCervejas"></div>
+    <div id="listCervejas">
+        
+    </div>
 </body>
-<script>
+<script>    
     function carregarDiv(){
-        console.log("func") 
         let div = document.getElementById("listCervejas")
-        console.log(div.childNodes.length)
-        if(div.childNodes.length == 0){
-            console.log("if")
-            div.innerHTML = `<h1>Devassa</h1>`
+        if(div.style.display == 'block'){
+            div.classList.toggle("animar")
+            
         }else{
-            div.innerHTML = ``
+            div.innerHTML = "<h1>Devassa</h1>"
+            div.style.display = 'block';
         }
         
     }
