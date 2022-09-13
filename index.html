@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervejas</title>
+</head>
+<body>
+    <div id="loadCervejas">
+        <button id="botaoCarregar">ver cervejas</button>
+    </div> 
+    <div id="listCervejas">
+
+    </div>
+</body>
+<script>
+    function carregarDiv(){
+        let div = document.getElementById("listCervejas")
+        div.innerHTML = `<h1>Devassa</h1>`
+    }
+    
+    let botao = document.getElementById("botaoCarregar")
+    botao.addEventListener("click", carregarDiv)
+ </script>
+</html>
