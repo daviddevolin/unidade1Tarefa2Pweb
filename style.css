@@ -1,19 +1,31 @@
-#listCervejas{
+#listCervejas.ativada{
     display: none;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
-#listCervejas.animar h1{
-    animation-name: animação;
+#listCervejas.desativada {
+    animation-name: fadeout;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
 
-@keyframes animação {
+@keyframes fadeout {
     from{
         opacity: 1;
     }
     to{
         opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

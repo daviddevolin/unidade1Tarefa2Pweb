@@ -12,19 +12,26 @@
     <div id="loadCervejas">
         <button id="botaoCarregar">ver cervejas</button>
     </div> 
-    <div id="listCervejas">
-        
-    </div>
+    <div id="listCervejas" data-action="fadeout"  ></div>
 </body>
 <script>    
     function carregarDiv(){
         let div = document.getElementById("listCervejas")
-        if(div.style.display == 'block'){
-            div.classList.toggle("animar")
+        if(div.dataset.action == "fadein"){
+            div.dataset.action = "fadeout";
+            div.classList.remove("ativada");
+            div.classList.add("desativada");
+            setTimeout(() => {
+                div.innerHTML = "";
+            }, 2000);
             
         }else{
             div.innerHTML = "<h1>Devassa</h1>"
             div.style.display = 'block';
+            div.dataset.action = "fadein";
+            div.classList.remove("desativada");
+            div.classList.add("ativada");
+            
         }
      
     }
